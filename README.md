@@ -4,16 +4,16 @@ This repository contains code for running and evaluation of GPT4-o and DeepL mod
 
 ## Files in the repository
 
-    • GPT.py , DeepL.py – scripts for running each model;
+"GPT.py" , "DeepL.py" – scripts for running each model;
     
-    • rlc_test.csv – Russian L2 Learners’ dataset used for evaluation;
+"rlc_test.csv" – Russian L2 Learners’ dataset used for evaluation;
     
-    • Evaluations.py – scripts containing all evaluation metrics used;
+"Evaluations.py" – scripts containing all evaluation metrics used;
     
-    • requirements.txt – versions of libraries used in the scripts;
+"requirements.txt" – versions of libraries used in the scripts;
     
-    • original_src.txt , correct_src.txt – text files with original and corrected source sentences;
+"original_src.txt" , "correct_src.txt" – text files with original and corrected source sentences;
     
-    • original_target_gpt.txt , correct_target_gpt.txt – text files with translations of original and corrected sentences produced by GPT4-o model;
+"original_target_gpt.txt" , "correct_target_gpt.txt" – text files with translations of original and corrected sentences produced by GPT4-o model;
     
-    • original_target_deepl.txt , correct_target_deepl.txt – text files with translations of original and corrected sentences produced by DeepL model.
+"original_target_deepl.txt" , "correct_target_deepl.txt" – text files with translations of original and corrected sentences produced by DeepL model.

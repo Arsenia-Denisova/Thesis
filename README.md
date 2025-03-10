@@ -19,10 +19,17 @@ This repository contains code for running and evaluation of GPT4-o and DeepL mod
 "original_target_deepl.txt" , "correct_target_deepl.txt" – text files with translations of original and corrected sentences produced by DeepL model.
 
 "results_gpt.csv" , "results_deepl.csv" - extended versions of initial dataset with results of our experiment. Each file contains additional columns: 
+
     "TRANS-ORIG" - translation of original sentence;
+    
     "TRANS-COR" - translation of corrected sentence;
+    
     "COMET22-ORIG" - COMET22 score for the translation of original sentence;
+    
     "BLEU-ORIG" - BLEU score for the translation of original sentence;
+    
     "CHRF-ORIG" - chrF score for the translation of original sentence;
+    
     "COMETKIWI-ORIG" - COMETKIWI score for the translation of original sentence;
+    
     "COMETKIWI-COR" - COMETKIWI score score for the translation of corrected sentence.

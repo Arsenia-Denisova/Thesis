@@ -100,11 +100,11 @@ COMET22_inputs_deepl = [
 
 COMET22_gpt = COMET22.predict(COMET22_inputs_gpt, batch_size=8)
 COMET22_gpt.system_score
-COMET22.scores
+comet22_gpt=COMET22.scores
 
 COMET22_deepl = COMET22.predict(COMET22_inputs_deepl, batch_size=8)
 COMET22_deepl.system_score
-COMET22_deepl.scores
+comet22_deepl=COMET22_deepl.scores
 
 
 # run COMETKIWI
@@ -126,19 +126,45 @@ COMETKIWI_inputs_cor_deepl = [{"src": src, "mt": trans} for src,
 
 COMETKIWI_gpt_orig = COMETKIWI.predict(COMETKIWI_inputs_orig_gpt, batch_size=8)
 COMETKIWI_gpt_orig.system_score
-COMETKIWI_gpt_orig.scores
+cometkiwi_gpt_orig=COMETKIWI_gpt_orig.scores
 
 COMETKIWI_deepl_orig = COMETKIWI.predict(COMETKIWI_inputs_orig_deepl, batch_size=8)
 COMETKIWI_deepl_orig.system_score
-COMETKIWI_deepl_orig.scores
+cometkiwi_deepl_orig=COMETKIWI_deepl_orig.scores
 
 COMETKIWI_gpt_cor = COMETKIWI.predict(COMETKIWI_inputs_cor_gpt, batch_size=8)
 COMETKIWI_gpt_cor.system_score
-COMETKIWI_gpt_cor.scores
+cometkiwi_gpt_cor=COMETKIWI_gpt_cor.scores
 
 COMETKIWI_deepl_cor = COMETKIWI.predict(COMETKIWI_inputs_cor_deepl, batch_size=8)
 COMETKIWI_deepl_cor.system_score
-COMETKIWI_deepl_cor.scores
+cometkiwi_deepl_cor=COMETKIWI_deepl_cor.scores
 
 
+# save translations and metrics' values into .csv files for each model
+
+df_gpt = pd.read_csv('rlc_test.csv')
+
+df_gpt["TRANS-ORIG"]=translation_gpt
+df_gpt["TRANS-COR"]=reference_gpt
+df_gpt["COMET22-ORIG"]=comet22_gpt
+df_gpt["BLEU-ORIG"]=bleu_gpt
+df_gpt["CHRF-ORIG"]=chrf_gpt_sent
+df_gpt["COMETKIWI-ORIG"]=cometkiwi_gpt_orig
+df_gpt["COMETKIWI-COR"]=cometkiwi_gpt_cor
+
+df_gpt.to_csv("results_gpt.csv")
+
+
+df_deepl = pd.read_csv('rlc_test.csv')
+
+df_deepl["TRANS-ORIG"]=translation_deepl
+df_deepl["TRANS-COR"]=reference_deepl
+df_deepl["COMET22-ORIG"]=comet22_deepl
+df_deepl["BLEU-ORIG"]=bleu_deepl
+df_deepl["CHRF-ORIG"]=chrf_deepl_sent
+df_deepl["COMETKIWI-ORIG"]=cometkiwi_deepl_orig
+df_deepl["COMETKIWI-COR"]=cometkiwi_deepl_cor
+
+df_deepl.to_csv("results_deepl.csv")
 

@@ -16,9 +16,9 @@ This repository contains code for running and evaluation of GPT4-o and DeepL mod
     
 "original_target_gpt.txt" , "correct_target_gpt.txt" – text files with translations of original and corrected sentences produced by GPT4-o model;
     
-"original_target_deepl.txt" , "correct_target_deepl.txt" – text files with translations of original and corrected sentences produced by DeepL model.
+"original_target_deepl.txt" , "correct_target_deepl.txt" – text files with translations of original and corrected sentences produced by DeepL model;
 
-"results_gpt.csv" , "results_deepl.csv" - extended versions of the initial dataset with results of our experiment. Each file contains additional columns: 
+"results_gpt.csv" , "results_deepl.csv" - extended versions of the initial dataset with the results of our experiment. Each file contains additional columns: 
 
     "TRANS-ORIG" - translation of original sentence;
     "TRANS-COR" - translation of corrected sentence;
